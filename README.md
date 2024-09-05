@@ -30,7 +30,7 @@ The program features two different algorithms for solving Sudoku puzzles:
 
       d. If no solution is found, backtrack and try different possibilities for the previous cells.
 
-**Advantages:** More efficient than standard backtracking. Focuses on cells that are harder to solve first, which can speed up the solving process. In testing, MRV was the fastest, taking ~4 seconds to solve puzzles when GUI updates are not performed.
+**Advantages:** More efficient than standard backtracking. Focuses on cells that are harder to solve first, which can speed up the solving process.
 
 **Performance:** In performance testing, MRV outperformed Backtracking. The approximate solving times (without GUI updates) were as follows:
 1. Backtracking: ~35 seconds
