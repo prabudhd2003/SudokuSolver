@@ -2,7 +2,7 @@ In this project I have built a Real-Time Sudoku Solver. It is a Java-based appli
 
 https://github.com/user-attachments/assets/c65ad600-cbef-4625-9042-c9bbc37ddf0b
 
-File `MultiSudokuSolver.java` solves Sudoku without UI update.
+`MultiSudokuSolver.java` solves Sudoku without UI update.
 
 The program features two different algorithms for solving Sudoku puzzles:
 
