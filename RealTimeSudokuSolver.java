@@ -33,7 +33,7 @@ public class RealTimeSudokuSolver {
             }
         }
 
-        String[] algorithms = {"Backtracking", "MRV (Minimum Remaining Value)", "Constraint Propagation"};
+        String[] algorithms = {"Backtracking", "MRV (Minimum Remaining Value)"};
         algorithmChoice = new JComboBox<>(algorithms);
 
         solveButton = new JButton("Solve");
@@ -109,9 +109,6 @@ public class RealTimeSudokuSolver {
                         break;
                     case "MRV (Minimum Remaining Value)":
                         solved = solveWithMRV();
-                        break;
-                    case "Constraint Propagation":
-                        solved = solveWithConstraintPropagation();
                         break;
                 }
 
@@ -191,32 +188,7 @@ public class RealTimeSudokuSolver {
         }
         return possibleNumbers;
     }
-
-    private static boolean solveWithConstraintPropagation() {
-        propagateConstraints(board);
-        return solveWithBacktracking();
-    }
-
-    private static void propagateConstraints(int[][] board) {
-        boolean progress;
-        do {
-            progress = false;
-            for (int row = 0; row < GRID_SIZE; row++) {
-                for (int col = 0; col < GRID_SIZE; col++) {
-                    if (board[row][col] == 0) {
-                        Set<Integer> possibleNumbers = getPossibleNumbers(board, row, col);
-                        if (possibleNumbers.size() == 1) {
-                            board[row][col] = possibleNumbers.iterator().next();
-                            updateGUI();
-                            sleepForUI();
-                            progress = true;
-                        }
-                    }
-                }
-            }
-        } while (progress);
-    }
-
+    
     private static boolean solveBoard(int[][] board) {
         for (int row = 0; row < GRID_SIZE; row++) {
             for (int col = 0; col < GRID_SIZE; col++) {
