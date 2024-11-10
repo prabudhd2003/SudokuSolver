@@ -1,4 +1,4 @@
-In this project I have built a Real-Time Sudoku Solver. It is a Java-based application that visually solves Sudoku puzzles using a graphical user interface (GUI). 
+In this project I have built a Real-Time Sudoku Solver. It is a Java-based application that visually solves Sudoku puzzles using a graphical user interface (GUI)
 
 https://github.com/user-attachments/assets/c65ad600-cbef-4625-9042-c9bbc37ddf0b
 
